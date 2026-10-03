@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* LIGHT MODE (DEFAULT) - Warm Architectural */
+    --background: #F5F3EE;
+    --surface: #FFFFFF;
+    --foreground: #171717;
+    --muted-foreground: #66635E;
+    --border: #DEDAD2;
+    --accent: #B76532;
+    --accent-light: #C97845;
+  }
+  
+  .dark {
+    /* DARK MODE - Premium Charcoal */
+    --background: #111111;
+    --surface: #151515;
+    --foreground: #F5F3EE;
+    --muted-foreground: #9ca3af;
+    --border: #2A2A2A;
+    --accent: #B76532;
+    --accent-light: #C97845;
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply antialiased transition-colors duration-300;
+  }
+}
